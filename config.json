@@ -1,15 +1,38 @@
 {
-  "inbounds": [{
-    "port": 8080,
-    "protocol": "vless",
-    "settings": {
-      "clients": [{"id": "71d6163a-e4f4-422a-b7c3-309e1c05fbe5"}],
-      "decryption": "none"
-    },
-    "streamSettings": {
-      "network": "ws",
-      "wsSettings": {"path": "/abess237"}
+  "log": {
+    "loglevel": "warning"
+  },
+
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": "env:PORT",
+      "protocol": "vless",
+
+      "settings": {
+        "clients": [
+          {
+            "id": "@abess237"
+          }
+        ],
+        "decryption": "none"
+      },
+
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+
+        "wsSettings": {
+          "path": "/@abess237",
+          "heartbeatPeriod": 20
+        }
+      }
     }
-  }],
-  "outbounds": [{"protocol": "freedom"}]
+  ],
+
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
