@@ -27,6 +27,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: abess237/abess-ops
+          tags: abess237/abess-ops1
           cache-from: type=gha
           cache-to: type=gha,mode=max
