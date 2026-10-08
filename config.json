@@ -23,7 +23,7 @@
         "security": "none",
 
         "wsSettings": {
-          "path": "/@abess237",
+          "path": "/@abess237.",
           "heartbeatPeriod": 20
         }
       }
